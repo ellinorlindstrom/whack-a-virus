@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="https://fav.farm/😎" />
+    <link rel="stylesheet" href="src/assets/css/style.css" />
+    <title>FED23 API-utveckling Realtime Frontend</title>
+  </head>
+
+  <body id="body">
+    <div id="app" class="hide"></div>
+    <!-- Start page -->
+    <section id="startPage">
+      <form class="startPageForm">
+        <h1 class="startPageTitle1">Kill The Virus!</h1>
+        <h2 class="startPageTitle2">Type in your name and start the game</h2>
+        <input id="usernameInput" type="text" placeholder="Your name" />
+        <button id="submit-username" type="submit">Let's go</button>
+      </form>
+
+      <!-- Score chart -->
+      <div class="pastScores">
+        <!-- Highscore -->
+        <div class="highScore">
+          <h2>Highscore</h2>
+          <ul class="highscoreChart">
+          </ul>
+        </div>
+
+        <!-- Past games -->
+        <div class="pastGames">
+          <h2>Past games</h2>
+          <ul class="games">
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Lobby page -->
+    <section id="lobbyPage" class="hide">
+      <div class="lobby">
+        <h1>Waiting for player 2 to join...</h1>
+      </div>
+    </section>
+
+    <!-- Game page -->
+    <section id="gamePage" class="hide">
+      <div id="countdownPage" style="display: none">
+        <h1 id="countdownTimer">.</h1>
+      </div>
+      <div class="game-field" style="display: none">
+
+        <!-- game field-->
+        <div class="grid-container">
+          <div class="grid-item"></div>
+          <div class="grid-item"></div>
+          <div class="grid-item"></div>
+          <div class="grid-item"></div>
+          <div class="grid-item"></div>
+          <div class="grid-item"></div>
+          <div class="grid-item"></div>
+          <div class="grid-item"></div>
+          <div class="grid-item"></div>
+          <div class="grid-item"></div>
+          <div class="grid-item"></div>
+          <div class="grid-item"></div>
+          <div class="grid-item"></div>
+          <div class="grid-item"></div>
+          <div class="grid-item"></div>
+          <div class="grid-item"></div>
+          <div class="grid-item"></div>
+          <div class="grid-item"></div>
+          <div class="grid-item"></div>
+          <div class="grid-item"></div>
+          <div class="grid-item"></div>
+          <div class="grid-item"></div>
+          <div class="grid-item"></div>
+          <div class="grid-item"></div>
+          <div class="grid-item"></div>
+        </div>
+
+        <!-- Score chart-->
+        <div class="score">
+          <div class="scorePlayer1">
+            <p id="player1"></p>
+            <p id="player1p"></p>
+            <p id="player1Timer"></p>
+            <p id="player1Reactiontime"></p>
+            <p class="highscore"></p>
+          </div>
+          <div class="scorePlayer2">
+            <p id="player2"></p>
+            <p id="player2p"></p>
+            <p id="player2Timer"></p>
+            <p id="player2Reactiontime"></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Play Again page -->
+    <section id="game-over-page" class="hide">
+      <div class="game-over">
+        <h1>Game over!</h1>
+        <h2 id="final-score">Final Scores:</h2>
+        <div id="final-score-list">
+        <h2 id="player-one"></h2>
+        <p id="player-one-points"></p>
+        <h2 id="player-two"></h2>
+        <p id="player-two-points"></p>
+        </div>
+        <h2>Do you want to play again?</h2>
+        <button id="play-again">Play again</button>
+      </div>
+    </section>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
